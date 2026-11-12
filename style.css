@@ -16,3 +16,26 @@
 .portfolio .section-top .section-note{padding-left:45px}
 .about .about-grid{align-items:center}
 @media(max-width:760px){.portfolio .section-top h2,.about .about-grid h2{max-width:calc(100% - 30px);font-size:clamp(32px,7.5vw,55px);padding:18px 0 22px}.portfolio .section-top h2::before,.about .about-grid h2::before{right:-35px;clip-path:polygon(0 0,calc(100% - 30px) 0,100% 100%,0 100%)}.portfolio .section-top .section-note{padding-left:0;margin-top:30px}}
+
+/* Cada projeto é um único card com título acima e duas telas reais. */
+.project-grid{gap:30px 26px;align-items:stretch}
+.project{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 5px 20px #17295505;transition:border-color .2s,box-shadow .2s}
+.project:hover{border-color:#8ca8df;box-shadow:0 10px 28px #17295512}
+.project-info{padding:26px 26px 23px;min-height:174px;gap:18px}
+.project-info h3{font-size:25px;margin-bottom:8px}
+.project-info p:not(.tag){font-size:13px;max-width:100%}
+.project-number{font-family:Manrope,sans-serif;color:#9cacc6;font-size:12px;padding-top:3px}
+.device-stage{position:relative;aspect-ratio:1.38;background:linear-gradient(135deg,#edf3ff,#e4edf9);margin:0 16px;border-radius:10px;overflow:hidden}
+.desktop-device{position:absolute;top:12%;left:4%;width:84%;filter:drop-shadow(0 12px 10px #142c5420)}
+.desktop-toolbar{height:18px;display:flex;gap:4px;align-items:center;padding:0 8px;background:#17233b;border-radius:7px 7px 0 0;color:#c0ccdf}
+.desktop-toolbar i{width:4px;height:4px;border-radius:50%;background:#6d839f}
+.desktop-toolbar span{font-size:6px;letter-spacing:.05em;margin-left:auto;line-height:1}
+.desktop-screen{border:5px solid #17233b;border-top:0;border-radius:0 0 6px 6px;aspect-ratio:1.48;overflow:hidden;background:#fff}
+.desktop-screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.desktop-foot{width:27%;height:19px;background:linear-gradient(90deg,#8fa1bc,#d2dceb,#8295b2);margin:auto;clip-path:polygon(34% 0,66% 0,72% 77%,100% 83%,100% 100%,0 100%,0 83%,28% 77%)}
+.phone-device{position:absolute;width:25%;aspect-ratio:375/844;right:4%;bottom:7%;border:5px solid #111b30;border-radius:19px;overflow:hidden;background:#fff;box-shadow:0 12px 23px #0b1b3d40}
+.phone-device img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}
+.phone-notch{position:absolute;top:0;left:28%;width:44%;height:9px;background:#111b30;border-radius:0 0 7px 7px;z-index:1}
+.project-visit{display:flex;justify-content:space-between;align-items:center;padding:17px 26px 21px;font-size:12px;font-weight:700;color:#385b8d;margin-top:auto}
+.project:hover .project-visit{color:#1743b5}
+@media(max-width:760px){.project-info{padding:22px 20px;min-height:0}.project-info h3{font-size:23px}.device-stage{margin:0 10px;aspect-ratio:1.3}.phone-device{border-width:4px;border-radius:15px;bottom:8%}.desktop-screen{border-width:4px}.project-visit{padding:17px 20px 20px}.project-grid{gap:26px}}
